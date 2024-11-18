@@ -19,6 +19,32 @@ public class TV {
         TV.numTV++;
     }
 
+    public static void setNumTV (int numTV) {
+        TV.numTV = numTV;
+        }
+    public static int getNumTV() {
+        return TV.numTV;
+        }
+
+    public void turnOff() {
+        this.estado = false;
+        }
+    public void turnOn() {
+        this.estado = true;
+        }
+    public void canalDown() {
+        this.setCanal(this.canal-1);
+        }
+    public void canalUp() {
+        this.setCanal(this.canal+1);
+        }
+    public void volumenDown() {
+        this.setVolumen(this.volumen-1);
+        }  
+    public void volumenUp() {
+        this.setVolumen(this.volumen+1);
+        }
+
     public Marca getMarca() {
         return this.marca;
         }
@@ -48,41 +74,13 @@ public class TV {
 	            }
             }
         }
-	
     public Control getControl() {
         return this.control;
         }
     public void setControl (Control control) {
         this.control = control;
         }
-    public static int getNumTV() {
-        return TV.numTV;
-        }
-    public static void setNumTV (int numTV) {
-        TV.numTV = numTV;
-        }
-
-    public void turnOn() {
-        this.estado = true;
-        }
-    public void turnOff() {
-        this.estado = false;
-        }
-    
     public boolean getEstado() {
         return this.estado;
         }
-
-    public void canalUp() {
-        this.setCanal(this.canal+1);
-    }
-    public void canalDown() {
-		this.setCanal(this.canal-1);
-	}
-    public void volumenUp() {
-        this.setVolumen(this.volumen+1);
-    }
-    public void volumenDown() {
-        this.setVolumen(this.volumen-1);
-    }   
 }
