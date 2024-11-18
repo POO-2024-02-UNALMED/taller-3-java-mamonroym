@@ -4,10 +4,10 @@ public class Marca {
     private String nombre;
     
     public Marca (String nombre) {
-        this.nombre = nombre;
+        this.setNombre(nombre);
     }
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public void setNombre (String nombre) {
         this.nombre = nombre;
